@@ -5,18 +5,42 @@ pares y el porcentaje de números impares.
 */
 let numDatos=0;
 
-function getnumericInput()
-{
-    do{
-        numDatos = Number(prompt(`por favor indique el numero de datos que ingresara`));
-        console.log(numDatos);
-            
-    }while(isNaN(numDatos) || numDatos < 1);
-return numDatos;
-}
+
+
 
 function OddsAndEvenPercentage()
 {
+    let arrayDatos=[];
+     arrayDatos.length = numDatos;
+    let odds=0;
+    let evens=0;
+    for(var i=0;i<arrayDatos.length;i++)
+        {
+            arrayDatos[i] = getnumericInput(0,2);//recibimos datos
+            if(arrayDatos[i] % 2 == 0)
+                {
+                    evens++;      
+                }else{
+                    odds++;
+                }
+        }
+    /*
+    100% = array.length
     
+    */
+    //pares impares
+    document.getElementById("resultados").innerHTML+=(`
+porcentaje de numeros pares : ${(evens*100)/arrayDatos.length}% <br>
+porcentaje de numeros impares : ${(odds*100)/arrayDatos.length}% <br>
+total datos : ${arrayDatos.length} <br>
+Datos recibidos ${arrayDatos}   <hr>                                              
+`);
+    
+}
+
+function RunCode()
+{
+    getnumericInput(1,1);
+    OddsAndEvenPercentage();
 }
 
