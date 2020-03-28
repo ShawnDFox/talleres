@@ -1,4 +1,5 @@
 Ejercicios taller 1 semana 1 (27/04/2020)
+Por: Mario Armando Laverde Medina
 
 todos los codigos estan probados y son funcionales.
 
