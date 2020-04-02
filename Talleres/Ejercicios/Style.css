@@ -1,0 +1,33 @@
+/* CSS Document */
+body
+{
+    display: flex;
+    background-color: #E5E5E5;
+    
+}
+.inputs
+{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 230px;
+    
+}
+.show
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    
+}
+.card
+{
+    background-color: #CDCDCD;
+    width:  100%;
+    height: 40px;
+    padding: 5px;
+   
+}
+
