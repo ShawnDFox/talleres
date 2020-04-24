@@ -1,0 +1,122 @@
+/* CSS Document */
+:root
+{
+    --BG-color-body: #DDDDDD;
+    --BG-color-element: #FCFCFC;
+    --color-text:#000;
+    --color1: #B38625;
+    --color2: #FFCF69;
+    --color3: #FFC74F;
+    --color4: #144CB3;
+    --color5: #4F8DFF;
+    
+}
+body
+{
+    background-color: var(--BG-color-body);
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    font-weight: bolder;
+    color: var(--color4);
+}
+div
+{
+    padding: 1px;
+    background-color: var(--BG-color-element);
+    /*border: 1px solid black;*/
+    border-radius: 5px;
+    
+    
+}
+input
+{
+    width: 80%;
+    margin: 6px;
+    
+}
+span{
+    color:var(--color-text);
+    padding-left: 5px;
+}
+span input
+{
+    width: 40%;
+    margin: 6px;
+}
+input[type="submit"]
+{
+    width: 50%;
+    
+}
+.layout
+{
+    display: grid;
+    grid-gap: 5px;
+    grid-template: 100% / 1fr 1fr 1fr;
+    
+}
+.g-table
+{
+    display: grid;
+    grid-gap: 1px;
+    grid-template: 40px / repeat(6,1fr);  
+    align-items: center;
+    
+}
+.column
+{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    
+}
+.row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.row-between
+{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+}
+.row-around
+{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-around;
+}
+.title-blue
+{
+    background-color: var(--color4);
+    color: var(--BG-color-element);
+    font-size: 18px;
+    
+}
+.title-blue span
+{
+    color: var(--BG-color-element);
+}
+.title
+{
+    background-color: var(--color3);
+    font-size: 20px;
+}
+.insert{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
+    /*width: ;*/
+    
+}
+.find{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.show{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
