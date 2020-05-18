@@ -1,0 +1,342 @@
+:root{
+    --Purple:#B412FF;
+    --Blue:#2228FF;
+    --Blue2:#1364E8;
+    --Blue-Ligth:#2FC1F4;
+    --Blue-purple:#5813E8;
+    --black:#141414;
+}
+@font-face
+{
+    font-family: orbitron-reg;
+    src: url("../fonts/Orbitron-Regular.ttf");
+}
+@font-face
+{
+    font-family: orbitron-bold;
+    src: url("../fonts/Orbitron-Bold.ttf");
+}
+@font-face
+{
+    font-family: orbitron-med;
+    src: url("../fonts/Orbitron-Medium.ttf");
+}
+@font-face
+{
+    font-family: michroma;
+    src: url("../fonts/Michroma.ttf");
+}
+*
+{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body
+{
+    font-family: orbitron-med;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background-image: url("../img/BG.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    /*display:flex;
+    justify-content: center;
+    align-items: center;*/
+}
+h1, h2, h3
+{
+    font-family: orbitron-bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    width: 100%;
+}
+
+.container
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+/*============================================= content layout ============================================*/
+.content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 25px;
+    height: 100vh;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 105px;
+    overflow-y: auto;
+
+}
+.scrollable
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content p{
+    text-align: justify;
+    text-justify: distribute;
+}
+/*============================================= sidebar ============================================*/
+.sidebar
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 95vh;
+    width: 30vw;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.sidebar>div{
+    
+    display: flex;
+    
+    justify-content: space-around;
+    font-size: 30px;
+   
+   
+}
+/*============================================= sidebar images ============================================*/
+.photo-display
+{
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+}
+.photo-decoration
+{
+    width: 500px;
+    height: 500px;
+    animation: rotation 120s infinite linear;
+}
+@keyframes rotation {
+    from {
+            transform: rotate(0deg);
+    }
+    to {
+            transform: rotate(359deg);
+    }
+}
+.photo-bg
+{
+    position: absolute;
+    scale: 0.7;
+    width: 355px;
+    height: 355px;
+   /* margin-top: 10.8vh;*/
+    border-radius: 50%;
+    background-color: #2FC1F4b4;
+    /*-webkit-box-shadow: 0px 0px 120px -36px #00f7ffe6;
+    -moz-box-shadow: 0px 0px 120px -36px rgba(0,247,255,0.9);*/
+    box-shadow: 0px 0px 120px -36px rgba(0,247,255,0.9);
+
+    z-index: -1;
+}
+.position
+{
+    position: absolute;
+    
+}
+.topleft
+{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+    top: -100px;
+}
+.photo
+{
+    scale: 0.7;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: 0 10%;
+    /*margin-top: 11vh;*/
+    border-radius: 50%;
+}
+/*============================================= Nav ============================================*/
+nav{
+    width: 18vw;
+}
+/*=========================================== Nav Buttons ===========================================*/
+a{
+    
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+/*
+a:link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: white;
+
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: white;
+
+  }
+*/
+.current_page
+{
+    border-right: 5px solid #D4C839;
+}
+nav>div{
+  
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(255, 255, 255, 0.0);
+    margin: 5px;
+    margin-left: 0px;
+    /*color: rgba(255, 255, 255, 0.164);*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+
+}
+nav>div:hover
+{
+    vertical-align: bottom;  
+    border-left: 5px solid var(--Blue-purple);
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.075);
+    
+}
+
+div>a:link{
+    
+    width: 100%;
+    margin: 0px;
+    padding-left: 10px;
+    color: rgba(255, 255, 255, 0.164);
+    font-size:18px;
+    
+}
+
+div>a:visited{
+    
+    
+    width: 100%;
+    margin: 0px;
+    padding-left: 10px;
+    color: rgba(255, 255, 255, 0.164);
+    font-size: 18px;
+    
+}
+div>a:active{ 
+    
+    vertical-align: middle;
+    border-left: 5px solid var(--Blue-purple);
+    border-bottom: none;
+    background-color: rgba(255, 255, 255, 0.075);
+    color: rgb(255, 255, 255);
+       
+}
+nav>div>a:link
+{
+    display: flex;
+    align-items: flex-end;
+    color: rgba(255, 255, 255, 0.164);
+}
+
+nav>div>a:visited{
+    display: flex;
+    align-items: flex-end;
+    color: rgba(255, 255, 255, 0.164);
+}
+nav>div>a:active
+{
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+}
+nav>div>a:hover
+{
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.664);
+}
+/*==============================================================*/
+.myinfo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.f_row
+{
+    display: flex;
+    flex-direction: row;
+    font-size: 35px;
+}
+
+/*===================================== Hexagons ===========================================*/
+.hex
+{
+    width: 200px;
+    height: 200px;
+    background: url("../img/Hex_border-02.png");
+    
+}
+
+.hex>.h_bg
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/Hex_fill-01.png");
+}
+/*======================================== progress bar ==========================================*/
+.BG_bar
+{
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    height: 3px;
+    transform: skew(-30deg);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+.bar
+{
+    
+    height: 5px;
+    transform: skew(-10deg);
+    background-color: rgba(140, 198, 63, 1);
+}
+.progress_container
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
